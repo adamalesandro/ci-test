@@ -1,5 +1,6 @@
 import unittest
-from run import multiply
+
+from sgnl.sample import multiply
 
 
 class TestFunctions(unittest.TestCase):
@@ -11,7 +12,8 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(multiply(2, .22), .44)
 
     def test_none(self):
-        self.assertEqual(multiply(2, None), ValueError)
+        with self.assertRaises(ValueError):
+            multiply(2, None)
 
 
 if __name__ == "__main__":
