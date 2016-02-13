@@ -15,6 +15,10 @@ class TestFunctions(unittest.TestCase):
         with self.assertRaises(ValueError):
             multiply(2, None)
 
+    def test_zero(self):
+        with self.assertRaises(ValueError):
+            multiply(100, 0)
+
 
 if __name__ == "__main__":
     unittest.main(exit=False)
