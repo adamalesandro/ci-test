@@ -22,3 +22,14 @@ install:
 
 test_script:
   - "%PYTHON%/Scripts/nosetests"
+
+version: 0.1.{build}
+
+notifications:
+  # Email
+  - provider: Email
+    to:
+      - adam@signalbase.com
+    subject: 'Build {{status}}'                  # optional
+    message: "{{message}}, {{commitId}}, ..."    # optional
+    on_build_status_changed: true
