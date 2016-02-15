@@ -33,3 +33,10 @@ notifications:
     subject: 'Build {{status}}'                  # optional
     message: "{{message}}, {{commitId}}, ..."    # optional
     on_build_status_changed: true
+
+  - provider: Slack
+    incoming_webhook: https://hooks.slack.com/services/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
+    template: |
+              <{{buildUrl}}|Build {{projectName}} {{buildVersion}} {{status}}>
+              Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}:
+              _{{commitMessage}}_
