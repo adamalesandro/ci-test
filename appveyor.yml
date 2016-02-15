@@ -33,7 +33,7 @@ notifications:
     subject: "Build {{projectName}} {{buildVersion}} {{status}}"                 # optional
     message: |
               Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}:
-              _{{commitMessage}}_   # optional
+              {{commitMessage}}
     on_build_status_changed: true
 
   - provider: Slack
