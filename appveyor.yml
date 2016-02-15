@@ -30,8 +30,10 @@ notifications:
   - provider: Email
     to:
       - adam@signalbase.com
-    subject: 'Build {{status}}'                  # optional
-    message: "{{message}}, {{commitId}}, ..."    # optional
+    subject: "Build {{projectName}} {{buildVersion}} {{status}}"                 # optional
+    message: |
+              Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}:
+              _{{commitMessage}}_   # optional
     on_build_status_changed: true
 
   - provider: Slack
