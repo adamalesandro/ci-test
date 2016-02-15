@@ -12,7 +12,9 @@ environment:
 
 
 init:
-  - "ECHO Initializing on PY_VERSION=%PYTHON_VERSION% PY_ARCHITECTURE=%PYTHON_ARCH% Located at at %PYTHON%"
+  - "ECHO ----------------------------------------------------------------------------------------------"
+  - "ECHO Initializing on PY_VERSION=%PYTHON_VERSION% PY_ARCHITECTURE=%PYTHON_ARCH% Located at %PYTHON%"
+  - "ECHO ----------------------------------------------------------------------------------------------"
 
 install:
   - "%PYTHON%/Scripts/pip.exe install nose"
