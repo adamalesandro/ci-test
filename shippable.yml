@@ -9,4 +9,4 @@ install: "pip install -r requirements.txt"
 
 script: nosetests
 
-version: 0.1.{BUILD_NUMBER}
+version: 0.1.{$BUILD_NUMBER}
