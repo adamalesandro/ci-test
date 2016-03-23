@@ -4,6 +4,7 @@ language: python
 # version numbers
 python:
   - "2.7"
+  - "pypy"
 
 before_install:
   - echo version number $BUILD_NUMBER
@@ -13,5 +14,7 @@ install: "pip install -r requirements.txt"
 
 script: nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml
 
-version: 0.1.{$BUILD_NUMBER}
-
+after_success:
+  - ls ~/.ssh
+  - pip install fabric
+  - fab test
