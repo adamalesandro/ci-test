@@ -4,6 +4,7 @@ language: python
 # version numbers
 python:
   - "2.7"
+  - "pypy"
 
 before_install:
   - echo version number $BUILD_NUMBER
