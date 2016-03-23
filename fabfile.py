@@ -1,4 +1,4 @@
-from fabric.api import
+from fabric.api import *
 
 # the user to use for the remote commands
 env.user = 'deployer'
