@@ -24,7 +24,7 @@ def deploy():
         run('touch /var/www/test/somfile.txt')
 
 def test():
-    print("WOOOOOOOHOOOOOOO")
+    run('ls /var')
 
 if __name__ == '__main__':
-    deploy()
+    test()
