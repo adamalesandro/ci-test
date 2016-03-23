@@ -15,6 +15,6 @@ install: "pip install -r requirements.txt"
 script: nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml
 
 after_success:
-  - ls -la ~/.ssh
+  - ls /tmp/ssh
   - pip install fabric
   - fab deploy
