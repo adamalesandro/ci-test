@@ -26,4 +26,4 @@ def test():
     print("WOOOOOOOHOOOOOOO")
 
 if __name__ == '__main__':
-    test()
+    deploy()
