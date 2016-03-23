@@ -1,15 +1,15 @@
-from fabric.api import *
-​
+from fabric.api import
+
 # the user to use for the remote commands
 env.user = 'deployer'
 #env.password = "Favor3neat!"
 # the servers where the commands are executed
 env.host_string = '45.55.171.65'
-​
+
 def pack():
     # create a new source distribution as tarball
     local('python setup.py sdist --formats=gztar', capture=False)
-​
+
 def deploy():
     # # figure out the release name and version
     # dist = local('python setup.py --fullname', capture=True).strip()
@@ -21,10 +21,9 @@ def deploy():
     run('mkdir /var/www/test')
     with cd('/var/www/test'):
         run('touch /var/www/test/somfile.txt')
-​
 
 def test():
-    print("WOOOOOOOHOOOOOOO")​
-​
+    print("WOOOOOOOHOOOOOOO")
+
 if __name__ == '__main__':
     test()
