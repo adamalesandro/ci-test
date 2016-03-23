@@ -18,10 +18,10 @@ def deploy():
     # put('dist/%s.tar.gz' % dist, '/tmp/yourapplication.tar.gz')
     # # create a place where we can unzip the tarball, then enter
     # # that directory and unzip it
-    run('sudo mkdir /var/www')
-    run('sudo mkdir /var/www/test')
+    #run('mkdir /var/www')
+    run('mkdir /var/www/test')
     with cd('/var/www/test'):
-        run('sudo touch /var/www/test/somfile.txt')
+        run('touch /var/www/test/somfile.txt')
 
 def test():
     run('ls /var')
