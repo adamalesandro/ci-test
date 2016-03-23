@@ -16,4 +16,4 @@ script: nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml
 
 after_success:
   - pip install fabric
-  - fab test
+  - fab deploy
