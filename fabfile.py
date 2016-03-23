@@ -5,7 +5,7 @@ env.user = 'deployer3'
 #env.password = "Favor3neat!"
 # the servers where the commands are executed
 env.host_string = '45.55.171.65'
-env.key_filename = "~/.ssh/id_rsa"
+env.key_filename = "/tmp/ssh/01_deploy"
 
 def pack():
     # create a new source distribution as tarball
