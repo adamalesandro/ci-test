@@ -1,7 +1,7 @@
 from fabric.api import *
 
 # the user to use for the remote commands
-env.user = 'deployer'
+env.user = 'deployer3'
 #env.password = "Favor3neat!"
 # the servers where the commands are executed
 env.host_string = '45.55.171.65'
