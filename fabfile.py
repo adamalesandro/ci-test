@@ -24,7 +24,7 @@ def deploy():
     #     run('touch /var/www/test/somfile.txt')
 
     ##TODO: Make this agnostic, many questions about that.
-    if run('mkdir /var/www/git-test'):
+    if run('mkdir /var/www/git-test') != "[45.55.171.65] out: mkdir: cannot create directory ‘/var/www/git-test’: File exists":
             with cd('/var/www/git-test'):
                 run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
     else:
