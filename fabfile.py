@@ -26,7 +26,10 @@ def deploy():
     ##TODO : I need to place the same type of code as above and make it perform git operations to deploy the project.
     run('mkdir /var/www/git-test')
     with cd('/var/www/git-test'):
-        run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+        # run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+        run('git pull')
+
+    ##ADDING SOME CHANGES##
 
 
 
