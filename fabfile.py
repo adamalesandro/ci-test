@@ -30,6 +30,7 @@ def deploy():
     with cd('/var/www/test_bare.git'):
         run('git fetch https://github.com/adamalesandro/ci-test.git')
 
+
     ##ATTEMPT AT POSSIBLY NECESSARY IF STATEMENT##
     # if run('mkdir /var/www/git-test'):
     #         with cd('/var/www/git-test'):
