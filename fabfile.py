@@ -24,13 +24,17 @@ def deploy():
     #     run('touch /var/www/test/somfile.txt')
 
     ##TODO: Make this agnostic, many questions about that.
-    if run('mkdir /var/www/git-test') != "[45.55.171.65] out: mkdir: cannot create directory ‘/var/www/git-test’: File exists":
-            with cd('/var/www/git-test'):
-                run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
-    else:
-        with cd('/var/www/git-test'):
-            # run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
-            run('git pull')
+    with cd('/var/www/git-test'):
+        run('git pull')
+
+    ##ATTEMPT AT POSSIBLY NECESSARY IF STATEMENT##
+    # if run('mkdir /var/www/git-test'):
+    #         with cd('/var/www/git-test'):
+    #             run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+    # else:
+    #     with cd('/var/www/git-test'):
+    #         # run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+    #         run('git pull')
 
 
     ##ADDING SOME CHANGES FOR BARE INIT REPO CREATION FIRST##
