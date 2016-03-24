@@ -27,6 +27,9 @@ def deploy():
     with cd('/var/www/git-test'):
         run('git pull')
 
+    with cd('/var/www/git-test-bare'):
+        run('git clone --bare https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+
     ##ATTEMPT AT POSSIBLY NECESSARY IF STATEMENT##
     # if run('mkdir /var/www/git-test'):
     #         with cd('/var/www/git-test'):
