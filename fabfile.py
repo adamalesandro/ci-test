@@ -24,17 +24,21 @@ def deploy():
     #     run('touch /var/www/test/somfile.txt')
 
     ##TODO: Make this agnostic, many questions about that.
-    # run('mkdir /var/www/git-test')
-    # with cd('/var/www/git-test'):
-    #     # run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
-    #     run('git pull')
+    if run('mkdir /var/www/git-test'):
+            with cd('/var/www/git-test'):
+                run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+    else:
+        with cd('/var/www/git-test'):
+            # run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+            run('git pull')
+
 
     ##ADDING SOME CHANGES FOR BARE INIT REPO CREATION FIRST##
 
-    run('mkdir /var/www/git-test-bare')
-    with cd('/var/www/git-test-bare'):
-        run('git --bare init')
-        run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test-bare')
+    # run('mkdir /var/www/git-test-bare')
+    # with cd('/var/www/git-test-bare'):
+    #     run('git --bare init')
+    #     run('git  https://github.com/adamalesandro/ci-test.git /var/www/git-test-bare')
 
 
 
