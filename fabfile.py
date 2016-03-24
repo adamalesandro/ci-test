@@ -19,9 +19,17 @@ def deploy():
     # # create a place where we can unzip the tarball, then enter
     # # that directory and unzip it
     #run('mkdir /var/www')
-    run('mkdir /var/www/test')
-    with cd('/var/www/test'):
-        run('touch /var/www/test/somfile.txt')
+    # run('mkdir /var/www/test')
+    # with cd('/var/www/test'):
+    #     run('touch /var/www/test/somfile.txt')
+
+    ##TODO : I need to place the same type of code as above and make it perform git operations to deploy the project.
+    run('mkdir /var/www/git-test')
+    with cd('/var/www/git-test'):
+        run('git clone https://github.com/adamalesandro/ci-test.git /var/www/git-test')
+
+
+
 
 def test():
     run('ls /var')
